@@ -19,6 +19,10 @@ export default async function Home() {
       {/* top banner */}
       <Banner />
 
+      <h1 className="text-2xl text-center  font-semibold mb-2">Top Books</h1>
+
+      <hr className="mb-5" />
+
       {/* book cards */}
       <BookList books={books} />
     </div>
