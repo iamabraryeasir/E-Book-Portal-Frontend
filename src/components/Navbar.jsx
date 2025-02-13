@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <>
       <div className="bg-white shadow-md mb-8">
-        <nav className="py-3.5 max-w-6xl mx-auto flex justify-between items-center">
+        <nav className="py-3.5 max-w-6xl mx-auto flex justify-between items-center px-4 md:px-0">
           <span>
             <Link href={"/"} className="flex items-center space-x-2">
               <img className="h-9" src="/ebook.png" alt="Main Logo" />
@@ -17,7 +17,7 @@ function Navbar() {
           <span className="space-x-4">
             <Link
               href={"/signin"}
-              className="text-custom-red font-medium py-1.5 px-4 rounded-md border-2 border-custom-red"
+              className="text-custom-red font-medium py-1.5 px-4 rounded-md border-2 border-custom-red hidden md:inline-block"
             >
               Sign up
             </Link>
