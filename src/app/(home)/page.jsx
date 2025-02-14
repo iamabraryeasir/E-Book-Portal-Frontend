@@ -5,7 +5,7 @@ export default async function Home() {
   // data fetching
   const response = await fetch(`${process.env.BACKEND_URL}/books`);
 
-  // // error handling
+  // error handling
   if (!response.ok) {
     throw new Error("Failed to fetch books");
   }
