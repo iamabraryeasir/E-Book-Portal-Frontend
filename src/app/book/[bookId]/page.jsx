@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import DownloadButton from "./components/DownloadButton";
 
 async function SingleBookPage({ params }) {
   let book = null;
@@ -26,13 +27,7 @@ async function SingleBookPage({ params }) {
         </p>
         <p className="text-balance">{book.description}</p>
 
-        <Link
-          href={book.bookFile}
-          target="_blank"
-          className="text-white bg-custom-red py-2 px-4 rounded w-fit hover:bg-custom-red/90 hover:-translate-y-0.5 duration-200"
-        >
-          Download the Book
-        </Link>
+        <DownloadButton fileLink={book.bookFile} />
       </div>
       <div className="w-1/3 flex items-center justify-center">
         <Image
@@ -41,7 +36,7 @@ async function SingleBookPage({ params }) {
           width={0}
           height={0}
           sizes="100vw"
-          className="h-[30rem] w-auto rounded hover:shadow-md hover:-translate-y-0.5 duration-200"
+          className="h-[30rem] w-auto rounded hover:shadow-md hover:scale-105 duration-300"
         />
       </div>
     </div>

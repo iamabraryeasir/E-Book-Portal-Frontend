@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function BookCard({ book }) {
   return (
-    <div className="bg-gray-50/50 shadow-sm rounded-lg p-4 flex items-start gap-4 hover:shadow-md hover:-translate-y-0.5 duration-200 border">
+    <div className="bg-gray-50/50 shadow-sm rounded-lg p-4 flex items-start gap-4 hover:shadow-md hover:scale-105 duration-200 border">
       <div className="w-1/3">
         <Image
           src={book.bookCoverImage}
