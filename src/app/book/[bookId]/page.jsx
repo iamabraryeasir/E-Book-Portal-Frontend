@@ -19,8 +19,8 @@ async function SingleBookPage({ params }) {
     throw new Error("Error fetching book");
   }
   return (
-    <div className="flex max-w-6xl mx-auto gap-8 mb-8">
-      <div className="w-2/3 flex flex-col gap-4">
+    <div className="flex flex-col-reverse md:flex-row max-w-6xl mx-auto gap-8 mb-8 px-4 md:px-4 text-center md:text-left">
+      <div className="w-full md:w-2/3 flex flex-col gap-4">
         <h1 className="text-4xl font-semibold">{book.title}</h1>
         <p className="text-balance text-xl">
           by <span className="text-custom-red">{book.author.name}</span>
@@ -29,7 +29,7 @@ async function SingleBookPage({ params }) {
 
         <DownloadButton fileLink={book.bookFile} />
       </div>
-      <div className="w-1/3 flex items-center justify-center">
+      <div className="w-full md:w-1/3 flex items-center justify-center">
         <Image
           src={book.bookCoverImage}
           alt={book.title}
