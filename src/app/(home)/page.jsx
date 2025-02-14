@@ -1,30 +1,18 @@
 import Banner from "@/app/(home)/components/Banner";
 import BookList from "./components/BookList";
+import { Suspense } from "react";
+import Loading from "./components/Loading";
 
-export default async function Home() {
-  // data fetching
-  const response = await fetch(`${process.env.BACKEND_URL}/books`);
-
-  // error handling
-  if (!response.ok) {
-    throw new Error("Failed to fetch books");
-  }
-
-  // data processing
-  const jsonResponse = await response.json();
-  const books = jsonResponse.data;
-
+export default function Home() {
   return (
     <div className="max-w-6xl mx-auto">
       {/* top banner */}
       <Banner />
 
-      <h1 className="text-2xl text-center  font-semibold mb-2">Top Books</h1>
-
-      <hr className="mb-5" />
-
       {/* book cards */}
-      <BookList books={books} />
+      <Suspense fallback={<Loading />}>
+        <BookList />
+      </Suspense>
     </div>
   );
 }
