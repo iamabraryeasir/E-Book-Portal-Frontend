@@ -1,18 +1,28 @@
 import BookCard from "./BookCard";
 
 async function BookList() {
-  // data fetching
-  const response = await fetch(`${process.env.BACKEND_URL}/books`);
+  let books = null;
 
-  // error handling
-  if (!response.ok) {
-    throw new Error("Failed to fetch books");
+  try {
+    // data fetching
+    const response = await fetch(`${process.env.BACKEND_URL}/books`, {
+      // cache: "no-store", // disable caching
+      next: {
+        revalidate: 1800, // revalidate every 30 minutes
+      },
+    });
+
+    // error handling
+    if (!response.ok) {
+      throw new Error("Failed to fetch books");
+    }
+
+    // data processing
+    const jsonResponse = await response.json();
+    books = jsonResponse.data;
+  } catch (error) {
+    throw new Error("Error fetching books");
   }
-
-  // data processing
-  const jsonResponse = await response.json();
-  const books = jsonResponse.data;
-
   return (
     <>
       <h1 className="text-2xl text-center  font-semibold mb-2">Top Books</h1>
