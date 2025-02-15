@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 📚 E-Book Portal Frontend
 
-## Getting Started
+### 🚀 About the Project
 
-First, run the development server:
+The **E-Book Portal** is a full-stack project designed to provide users with an intuitive platform to browse, download, and manage eBooks. This **frontend** is built using **Next.js (App Router)** and styled with **Tailwind CSS** for a modern and responsive UI.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### 🛠️ Tech Stack
+
+- **Frontend:** Next.js (App Router), Tailwind CSS
+- **Backend:** Node.js, Express.js, MongoDB (🔗 [Backend Repo](#))
+- **Deployment:** Vercel (planned)
+
+### 📂 Project Structure
+
+The project follows a clean and modular folder structure:
+
+```
+/src
+│── app/
+│   ├── (home)/
+│   │   ├── components/
+│   │   │   ├── Banner.jsx
+│   │   │   ├── BookCard.jsx
+│   │   │   ├── BookList.jsx
+│   │   │   ├── Loading.jsx
+│   │   ├── page.jsx
+│   │── book/[bookId]/
+│   │   ├── components/
+│   │   │   ├── DownloadButton.jsx
+│   │   ├── page.jsx
+│   ├── components/
+│   │   ├── Footer.jsx
+│   │   ├── Navbar.jsx
+│── public/
+│── .env (environment variables)
+│── tailwind.config.mjs
+│── next.config.mjs
+│── package.json
+│── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🛠 Installation & Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 📌 Prerequisites
 
-## Learn More
+Make sure you have the following installed:
 
-To learn more about Next.js, take a look at the following resources:
+- **Node.js** (v18+)
+- **npm** or **yarn**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 📥 Clone the Repository
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+git clone https://github.com/iamabraryeasir/E-Book-Portal-Frontend.git
+cd E-Book-Portal-Frontend
+```
 
-## Deploy on Vercel
+### 📦 Install Dependencies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm install  # or yarn install
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### ⚙️ Configure Environment Variables
+
+Create a `.env` file in the root directory and add your API URL:
+
+```
+BACKEND_URL=your_backend_api_url
+```
+
+### 🚀 Run the Development Server
+
+```bash
+npm run dev  # or yarn dev
+```
+
+The project will be live at: **http://localhost:3000**
+
+## 📌 Features
+
+✅ Browse eBooks 📚  
+✅ Download eBooks with a single click ⬇️  
+✅ Responsive & Modern UI 🎨  
+✅ Fast and optimized with Next.js 🚀
+
+## 👨‍💻 Developer
+
+**Abrar Yeasir**  
+🔗 GitHub: [@iamabraryeasir](https://github.com/iamabraryeasir)  
+🔗 LinkedIn: [Abrar Yeasir](https://www.linkedin.com/in/iamabraryeasir)
+
+## 📝 Future Plans
+
+- 📊 **Admin Dashboard** for book & user management
+- 💳 **Payment Gateway** for premium content
+- 🚀 **More Enhancements & Features**
+
+**Contributions, issues, and feature requests are welcome!** 🎉
