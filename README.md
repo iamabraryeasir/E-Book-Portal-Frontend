@@ -7,7 +7,7 @@ The **E-Book Portal** is a full-stack project designed to provide users with an 
 ### 🛠️ Tech Stack
 
 - **Frontend:** Next.js (App Router), Tailwind CSS
-- **Backend:** Node.js, Express.js, MongoDB (🔗 [Backend Repo](#))
+- **Backend:** Node.js, Express.js, MongoDB (🔗 [Backend Repo](https://github.com/iamabraryeasir/E-Book-Portal-Backend))
 - **Deployment:** Vercel (planned)
 
 ### 📂 Project Structure
